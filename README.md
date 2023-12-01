@@ -1,18 +1,17 @@
 # HyP-NeRF
 
-Source code for the website: [HyP-NeRF: Learning Improved NeRF Priors using a HyperNetwork](https://hyp-nerf.github.io/).
+Source code for the website: [Concept Distillation: Leveraging Human-Centered
+Explanations for Model Improvement](https://github.com/avani17101/Concept-Distilllation).
 
 ## BibTex
 ```
-@misc{hypnerf2023,
-      title={HyP-NeRF: Learning Improved NeRF Priors using a HyperNetwork}, 
-      author={Bipasha Sen and Gaurav Singh and Aditya Agarwal and Rohith Agaram and K Madhava Krishna and Srinath Sridhar},
-      year={2023},
-      eprint={2306.06093},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@inproceedings{gupta2023concept,
+        title={Concept Distillation: Leveraging Human-Centered Explanations for Model Improvement},
+        author={Gupta, Avani and Saini, Saurabh and Narayanan, PJ},
+        booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+        year={2023}
+      }
 ```
 ## License
 
-This website is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). It is borrowing this [source code](https://github.com/nerfies/nerfies.github.io).
+This website is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). It is borrowing this [source code](https://github.com/nerfies/nerfies.github.io/) which is based on [source code](https://github.com/nerfies/nerfies.github.io).
