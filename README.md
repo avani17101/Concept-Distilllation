@@ -1,7 +1,7 @@
 # Concept Distillation
 
 Source code for the website: [Concept Distillation: Leveraging Human-Centered
-Explanations for Model Improvement](https://github.com/avani17101/Concept-Distilllation).
+Explanations for Model Improvement](https://avani17101.github.io/Concept-Distilllation/).
 
 ## BibTex
 ```
