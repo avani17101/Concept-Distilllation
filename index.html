@@ -1,128 +1,234 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Accepted in Neurips 2023"/>
-    <title>CD</title>
-    <!-- Bootstrap -->
-    <!--link href="css/bootstrap-4.4.1.css" rel="stylesheet"-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"-->
-    <!--style>
-      body {
-        background: #fdfcf9 no-repeat fixed top left;
-        font-family:'Open Sans', sans-serif;
-      }
-    </style-->
+<html>
 
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Concept Distillation: Leveraging Human-Centered
+Explanations for Model Improvement">
+  <meta name="keywords" content="Concept Distillation, CAVs, Concepts, XAI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept Distillation: Leveraging Human-Centered
+Explanations for Model Improvement</title>
 
-  <!-- cover -->
-  <section>
-    <div class="jumbotron text-center mt-0">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2>Concept Distillation: Leveraging Human-Centered
-Explanations for Model Improvement​</h2>
-            <h4 style="color:#6e6e6e;"> Neurips 2023 </h4>
-            <hr>
-            
-              <style>
 
-              /* Set additional styling options for the columns*/
-              .column {
-              float: left;
-              width: 33%;
-              }
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-              .row:after {
-              content: "";
-              display: table;
-              clear: both;
-              }
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/CD.svg">
 
-              
-              </style>
-          
-           <body>
-              <div class="row">
-                  <div class="column" >
-                      <h6>Avani Gupta</h6>
-                      <h8>M42, UAE<br>
-                      <h8>CVIT, KCIS, IIIT Hyderabad, India<br> avani.gupta@research.iiit.ac.in </h8><br>
-                    
-                  </div>
-                  <div class="column" >
-                      <h6>Saurabh Saini</h6>
-                      <h8>CVIT, KCIS, IIIT Hyderabad<br> saurabh.saini@research.iiit.ac.in </h8>
-                  </div>
-                  <div class="column" >
-                    <h6>P J Narayanan</h6>
-                    <h8>CVIT, KCIS, IIIT Hyderabad<br> pjn@iiit.ac.in </h8>
-                </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Concept Distillation: Leveraging Human-Centered
+Explanations for Model Improvement</h1>
+          <h2 class="title is-3 publication-venue">NeurIPS 2023</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://avani17101.github.io/">Avani Gupta<sup>1️⃣</sup><sup>2️⃣</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://sophont01.github.io/">Saurabh Saini</a><sup>2️⃣</sup>,</span>
+              <span class="author-block">
+                <a href="https://faculty.iiit.ac.in/~pjn/">P J Narayanan</a><sup>2️⃣</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1️⃣</sup>M42, UAE</span>
+              <span class="author-block"><sup>2️⃣</sup>CVIT, KCIS, IIIT Hyderabad</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2311.15303"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+					<a href="https://arxiv.org/abs/2311.15303"
+						class="external-link button is-normal is-rounded is-dark">
+						<span class="icon">
+							<i class="ai ai-arxiv"></i>
+						</span>
+						<span>arXiv</span>
+					</a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+					<a href="https://youtu.be/pg81pUgAE2I?si=uik1QkdyHNCBLBvV"
+						class="external-link button is-normal is-rounded is-dark">
+						<span class="icon">
+							<i class="fab fa-youtube"></i>
+						</span>
+						<span>Video</span>
+					</a>
+				</span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/avani17101/CD" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+              <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                  class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data</span>
+                </a>
+            </span> -->
               </div>
-           </body>
-           
-            <br>             
-            <br>
-            <a class="btn btn-secondary btn-lg" href="https://arxiv.org/abs/2311.15303" role="button">Paper</a>
-            <a class="btn btn-secondary btn-lg" href="docs/Neurips_Poster.pdf" role="button">Poster</a> 
-            <a class="btn btn-secondary btn-lg" href="https://github.com/avani17101/CD" role="button">Code</a> 
-            <!-- <a class="btn btn-secondary btn-lg" href="" role="button">Supplementary</a>  -->
-            <a class="btn btn-secondary btn-lg" href="https://docs.google.com/presentation/d/1SozecUNEOf8ljPsDwiKbqzDgw0eHMQfgwi4xkumrans/edit?usp=sharing" role="button">PPT</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<center> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pg81pUgAE2I?si=GLeg_J9zZ7TDfO7R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<section class="section">
+	<div class="container is-max-desktop">
+		<!-- Abstract. -->
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Abstract</h2>
+				<div class="content has-text-justified">
+				<p>
+					Humans use abstract concepts instead of hard features for generalization. Recent
+          interpretability research has focused on human-centered concept explanations of
+          neural networks. We present Concept Distillation, a novel method and framework
+          for concept-sensitive training to induce human-centered knowledge into the model.
+          We use Concept Activation Vectors (CAVs) to estimate the model’s sensitivity
+          and possible biases to a given concept. We extend CAVs to ante-hoc training
+          from post-hoc analysis. We distill the conceptual knowledge from a pretrained
+          knowledgeable teacher to a student model focused on a single downstream task.
+          Our method can sensitize or desensitize the student model towards concepts. We
+          show applications of concept-sensitive training to debias classification and to
+          induce prior knowledge into a reconstruction problem. We also introduce the
+          TextureMNIST dataset to evaluate the presence of complex texture biases. We
+          show that concept-sensitive training can improve model interpretability, reduce
+          biases, and induce prior knowledge. 
+				</p>
+				</div>
+			</div>
+		</div>
+    </div>
+  </section>
+
+  <div class="item item-fullbody">
+    <video poster="" id="fullbody" autoplay controls muted loop playsinline width="50%">
+      <source src="./static/videos/teasor.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</div>
+
+
+
+<br>
+<br>
+<h2 class="title is-3">Our main contributions</h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Video 1 -->
+      <div class="column">
+        <div class="content">
+          <video id="conceptLossVideo" width="100%" controls style="cursor: pointer;">
+            <source src="./static/videos/concept_loss.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Concept Loss controls concept sensitivity.</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="column">
+        <div class="content">
+          <video id="protoTypesVideo" width="100%" controls style="cursor: pointer;">
+            <source src="./static/videos/proto.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Proto-types enable intermediate-layer sensitivity calculation.</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="column">
+        <div class="content">
+          <video id="teacherVideo" width="100%" controls style="cursor: pointer;">
+            <source src="./static/videos/distill.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Teacher helps avoid model concept bias.</p>
+          <!-- Additional text here -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ Please refer our paper for results.
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{gupta2023concept,
+        title={Concept Distillation: Leveraging Human-Centered Explanations for Model Improvement},
+        author={Gupta, Avani and Saini, Saurabh and Narayanan, PJ},
+        booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+        year={2023}
+      }</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>. It is borrowing this <a
+                href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <center>  <iframe width="560" height="315" src="https://www.youtube.com/embed/pg81pUgAE2I?si=I7mOAJTxN0OEgFAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
- 
-  <!-- abstract -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Abstract</h3>
-            <hr style="margin-top:0px">
-
-            <!-- <div class="embed-responsive embed-responsive-16by9"> -->
-                <!-- <iframe style="clip-path: inset(1px 1px)" width="100%" height="100%" src="https://www.youtube.com/embed/EpmnpwwaR14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
-            <!-- </div> -->
-                <!-- <img class="img-fluid" src="images/CD_diag-teasor.png" alt="Teaser"> -->
-          <p class="text-justify">
-            Humans use abstract concepts instead of hard features for generalization. Recent
-interpretability research has focused on human-centered concept explanations of
-neural networks. We present Concept Distillation, a novel method and framework
-for concept-sensitive training to induce human-centered knowledge into the model.
-We use Concept Activation Vectors (CAVs) to estimate the model’s sensitivity
-and possible biases to a given concept. We extend CAVs to ante-hoc training
-from post-hoc analysis. We distill the conceptual knowledge from a pretrained
-knowledgeable teacher to a student model focused on a single downstream task.
-Our method can sensitize or desensitize the student model towards concepts. We
-show applications of concept-sensitive training to debias classification and to
-induce prior knowledge into a reconstruction problem. We also introduce the
-TextureMNIST dataset to evaluate the presence of complex texture biases. We
-show that concept-sensitive training can improve model interpretability, reduce
-biases, and induce prior knowledge. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
- 
-  </script>
-  <!--script>
-    MathJax = {
-      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script-->
+  </footer>
+  <div hidden="hidden">
+	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=XFkX9yDAINaX-IcWo2Y1JPMQjMSlNo-z-isZSYW2_jo"></script>
+  </div>
 </body>
 </html>
